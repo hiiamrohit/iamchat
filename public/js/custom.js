@@ -168,7 +168,7 @@ if((sender==key) && (count==0)) {
 
 
 
-$(".pchat").live('click',function() {  
+$(document).on('click', '.pchat', function() {  
  var id=$(this).attr('id');
  var elem = document.getElementById('chat_div_'+id);
 if(typeof(elem) != 'undefined' && elem != null){
