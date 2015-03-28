@@ -1,7 +1,7 @@
 /*
- * Author: Rohit Patel
+ * Author: Rohit Kumar
  * Date: 12-06-2014
- * App Name: YoYoChatLive
+ * App Name: Iamchat
  * Description: Chat application using nodejs and socket.io
  */
 var express = require('express');
