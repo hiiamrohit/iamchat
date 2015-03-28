@@ -1,0 +1,24 @@
+{
+  "name": "YoYoChatLive",
+  "description": "My first chat application using nodeJs and socket.io",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rohitphp5/YoYoChat.git"
+  },
+  "dependencies": {
+    "express": "~3.4.0",
+    "jade": "*",
+    "socket.io": "0.8.x",
+    "logfmt": "~1.1.2",
+    "nodemailer": "~0.7.0",
+    "body-parser": "~1.4.3"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}

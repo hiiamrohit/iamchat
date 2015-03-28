@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YoYoChatLive</title>
+
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom -->
+    <link href="/css/custom.css" rel="stylesheet">
+     <link rel="stylesheet" href="/css/jquery-ui-1.10.4.custom.css">
+      <link type="text/css" href="/css/jquery.ui.chatbox.css" rel="stylesheet" />
+      <link type="text/css" href="/css/core.css" rel="stylesheet" />
+
+     </head>
+  <body>
+  
+ <!-- Start Feedback Form -->
+   <div class="feedback">
+	<a id="feedback_button">Feedback</a>	
+	<div class="form">
+	<h3>Please send me your feedback</h3>
+		<textarea id="feedback_text"></textarea>
+		<button id="feedback" class="btn btn-primary btn-lg" />
+		 <span class="glyphicon glyphicon-send" ></span> Send
+		</button>
+	</div>
+</div>
+<!-- End Feedback Form -->
+
+    <div id="PrivateTab">    </div>
+    </div>
+
+  
+  <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-warning-sign" ></span> Alert Message</h4>
+      </div>
+      <div class="modal-body" id="alertMsg">
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Modal Loading-->
+<div class="modal fade" id="myModalLoading" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+            <div class="modal-body" style="text-align:center;">
+         <img src='/images/loading.GIF'><h3>  <span id="loadingText">Loading please wait....</span></h3>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+ 
+    <div id="contextFirst" style="display:none;"> 
+    <h3 style="text-align:center;"><!--:::::::::: Yo Yo Chat Live :::::::::: --></h3>
+    <div class="panel panel-primary">
+     <div class="panel-heading"><h3>Connect with every one!</h3></div>
+          <div class="panel-body" style="height:40%; text-align:center;" >
+           <form role="form"  >
+             <input type="input" style= "width:100%;" class="form-control input-lg" 
+               id="nickname" placeholder="Enter your nick name!" maxlength="50"><br/>
+             <button type="submit" class="btn btn-primary btn-lg" id="startChat">
+                <span class="glyphicon glyphicon-star" ></span> Start Chat
+             </button>
+         </form>     
+         </div>
+</div> 
+
+   </div>
+   
+   
+    <div id="context" style="display:none;">  
+    <div id="leftbar"> 
+    
+    <div class="panel panel-default">
+  <div class="panel-heading"><span class="glyphicon glyphicon-user"></span>  My Info </div>
+  <div class="panel-body ">
+   <ul class="list-group" >
+   <li class="list-group-item " ><span class="glyphicon glyphicon-star-empty" ></span> <a href="javascript:void(0);" class="pchatme" id="myInfo"></a>
+   </li>
+  
+</ul>
+
+  </div>
+</div>
+    
+    <div class="panel panel-default">
+  <div class="panel-heading"><span class="glyphicon glyphicon-user"></span> <span class="badge" id="totalUser"></span> Users Online! </div>
+  <div class="panel-body bar">
+   <ul class="list-group" id="userList">
+  
+</ul>
+
+  </div>
+</div>
+</div>
+
+ <div id="chatbar">  <div class="panel panel-default">
+  <div class="panel-heading"><span class="glyphicon glyphicon-comment"></span> Group Chat </div>
+  <div class="panel-body" id="barch"> 
+  
+  
+   <div id="messages">
+   
+       
+   </div>
+   <div id="msgSending" style="height:30px;"></div>
+   
+    <p class="bubble-content-txt" style="height:30px; "></p>
+   
+   
+   
+
+    
+ 
+  </div>
+  
+  <div class="panel-footer"> 
+  <div id="chatBox">    
+           <form role="form" class="form-inline" id="chatForm">
+           <input type="hidden" id="username" >
+             <input type="input" style= "width:100%;" class="form-control input-lg" 
+               id="chatInput" placeholder="Start texting...." required autocomplete="off">
+             
+         </form> 
+      </div>   
+  </div>
+</div></div>
+
+    <div id="rightbar">  
+    
+     <div class="panel panel-default">
+  <div class="panel-heading"><span class="glyphicon glyphicon-user"></span>  My Login Time </div>
+  <div class="panel-body ">
+   <ul class="list-group" id="myActivity">
+   <li class="list-group-item" >
+   <a href="javascript:void(0);" id="lgtime" class="pchatme" id="myInfo"></a>
+   </li>
+ 
+</ul>
+
+  </div>
+</div>
+    
+    <div class="panel panel-default">
+  <div class="panel-heading"><span class="glyphicon glyphicon-user"></span> Users Activity Log!</div>
+  <div class="panel-body bar" id="userAct">  
+ 
+    <ul class="list-group" id="userActivity">
+  
+</ul>
+  </div>
+</div></div>    
+   </div>
+
+   
+   
+    
+    
+   
+   <div class="bottombar">
+   <div class="left"><span class="badge">Copyright © 2014</span></div>
+   
+   <div class="right"><span class="badge">Developed By <a href="http://www.iamrohit.in" target="_blank">Rohit Kumar</a></span></div>
+   <div>
+   
+ 
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> 
+    <script src="/js/custom.js"></script>
+<script src="/js/jquery-ui.js"></script>
+ <script type="text/javascript" src="/js/jquery.ui.chatbox.js"></script>
+ <script type="text/javascript" src="/js/core.js"></script>
+    
+  </body>
+</html>
+
