@@ -1,5 +1,5 @@
 {
-  "name": "YoYoChatLive",
+  "name": "Iamchat",
   "description": "My first chat application using nodeJs and socket.io",
   "version": "0.0.1",
   "private": true,
