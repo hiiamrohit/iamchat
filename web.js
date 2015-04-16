@@ -39,13 +39,13 @@ app.post('/sendEmail', function(req, res){
   var smtpTransport = nodemailer.createTransport("SMTP",{
     service: "Gmail",
     auth: {
-        user: "rohit20.kumar1988@gmail.com",
+        user: "iamrohitx@gmail.com",
         pass: "XYZ"
     }
   });
    var mailOptions = {
     from: "Yo Yo Chat ✔ <rohit.php5@gmail.com>", // sender address
-    to: "rohit.php5@gmail.com", // list of receivers
+    to: "hi@iamrohit.in", // list of receivers
     subject: "Yo Yo Chat Feedback ✔", // Subject line
     //text: "Hello world ✔", // plaintext body
     html: "<b>"+req.body.feedback+"</b>" // html body
